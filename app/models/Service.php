@@ -11,7 +11,7 @@ class Service
 
     public function getServices()
     {
-        $query = "SELECT * FROM " . $this->table;
+        $query = "SELECT * FROM " . $this->table . " ORDER BY Id DESC";
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
         return $stmt;

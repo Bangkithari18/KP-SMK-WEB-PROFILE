@@ -25,8 +25,8 @@
                         </div>
                         <div class="col-md-7 col-sm-12 col-xs-12" style="text-align: right;">
                             <ul class="list-inline float-right top-right">
-                                <li class="list-inline-item pl-3 pr-0"><i class="fa fa-envelope"></i> smkalhusnapabuaranbisa@gmail.com</li>
-                                <li class="list-inline-item pl-3 pr-0"><i class="fa fa-phone"></i> +62 895-3921-65737</li>
+                                <li class="list-inline-item pl-3 pr-0"><i class="fa fa-envelope"></i> <?php echo htmlspecialchars($contact['email']); ?></li>
+                                <li class="list-inline-item pl-3 pr-0"><i class="fa fa-phone"></i> <?php echo htmlspecialchars($contact['phone_number']); ?></li>
                             </ul>
                         </div>
                     </div>

@@ -17,12 +17,16 @@
                     <?php
                     $count = 0;
                     foreach ($services as $service):
-                        if ($count >= 3) break;
+                        if ($count >= 5) break;
                     ?>
                         <div class="col-md-12 mb-4">
                             <div class="card shadow-sm">
                                 <div class="card-body d-flex">
-                                    <img src="assets/img/logo.jpg" width="100px" class="mr-3">
+                                    <?php if (!empty($service['attachment'])): ?>
+                                        <img src="serve_image.php?file=<?= urlencode($service['attachment']) ?>" alt="Attachment" style="max-width: 100px; max-height: 100px;">
+                                    <?php else: ?>
+                                        No image
+                                    <?php endif; ?>
                                     &nbsp;
                                     <div>
                                         <h5 class="card-title mb-2"><?php echo htmlspecialchars($service['title']); ?></h5>
@@ -117,9 +121,9 @@
     <section id="contact">
         <h2 class="mt-4">Contact Us</h2>
         <ul class="list-group">
-            <li class="list-group-item"><strong>Email:</strong> <?php echo htmlspecialchars($contact['title']); ?></li>
-            <li class="list-group-item"><strong>Phone:</strong> <?php echo htmlspecialchars($contact['content']); ?></li>
-            <li class="list-group-item"><strong>Address:</strong> <?php echo nl2br(htmlspecialchars($contact['content'])); ?></li>
+            <li class="list-group-item"><strong>Email:</strong> <?php echo htmlspecialchars($contact['email']); ?></li>
+            <li class="list-group-item"><strong>Phone:</strong> <?php echo htmlspecialchars($contact['phone_number']); ?></li>
+            <li class="list-group-item"><strong>Address:</strong> <?php echo nl2br(htmlspecialchars($contact['address'])); ?></li>
         </ul>
     </section>
 </div>
@@ -128,21 +132,18 @@
         var fullText = document.getElementById("text-content");
         var link = document.getElementById("read-more");
 
-        // If the text is currently expanded, collapse it
         if (fullText.style.height === "auto") {
-            fullText.style.height = "100px"; // Limit height (approximately 400 characters)
+            fullText.style.height = "100px";
             link.innerHTML = "Selengkapnya";
         } else {
-            // Expand the text
-            fullText.style.height = "auto"; // Set to auto to show full content
-            link.innerHTML = "Tutup"; // Change link text to "Tutup"
+            fullText.style.height = "auto";
+            link.innerHTML = "Tutup";
         }
     }
 
-    // Limit the paragraph to 400 characters initially
     window.onload = function() {
         var content = document.getElementById("text-content").innerText;
-        var truncatedContent = content.slice(0, 400); // Get the first 400 characters
+        var truncatedContent = content.slice(0, 400);
         document.getElementById("text-content").innerText = truncatedContent;
     }
 </script>
