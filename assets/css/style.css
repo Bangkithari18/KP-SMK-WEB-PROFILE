@@ -1,0 +1,41 @@
+/* style.css */
+
+/* Styling untuk kontainer */
+.container {
+  max-width: 1200px;
+}
+
+/* Judul */
+h1,
+h2 {
+  color: #007bff;
+}
+
+/* Gaya untuk list group (Contact Us) */
+.list-group-item {
+  background-color: #f8f9fa;
+}
+
+/* Gaya untuk card (Services) */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1rem;
+}
+
+footer {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+}
