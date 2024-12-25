@@ -2,7 +2,7 @@
 class About
 {
     private $conn;
-    private $table = 'about';
+    private $table = 'master_info';
 
     public function __construct($db)
     {

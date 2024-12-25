@@ -2,7 +2,7 @@
 class Contact
 {
     private $conn;
-    private $table = 'contact';
+    private $table = 'master_info';
 
     public function __construct($db)
     {

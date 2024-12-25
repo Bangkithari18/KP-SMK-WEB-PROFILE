@@ -10,7 +10,7 @@
 
 <div class="container mt-5">
     <section id="about">
-        <h2 class="mt-4">Hot News</h2>
+        <h2 class="mt-4">Berita Terbaru</h2>
         <div class="row">
             <div class="col-md-8">
                 <div class="row">
@@ -25,8 +25,8 @@
                                     <img src="assets/img/logo.jpg" width="100px" class="mr-3">
                                     &nbsp;
                                     <div>
-                                        <h5 class="card-title mb-2">halo</h5>
-                                        <p class="card-text">yoo</p>
+                                        <h5 class="card-title mb-2"><?php echo htmlspecialchars($service['title']); ?></h5>
+                                        <p class="card-text"><?php echo htmlspecialchars($service['content']); ?></p>
                                     </div>
                                 </div>
                             </div>
@@ -76,8 +76,8 @@
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm">
                         <div class="card-body">
-                            <h5 class="card-title"><?php echo htmlspecialchars($service['name']); ?></h5>
-                            <p class="card-text"><?php echo nl2br(htmlspecialchars($service['description'])); ?></p>
+                            <h5 class="card-title"><?php echo htmlspecialchars($service['title']); ?></h5>
+                            <p class="card-text"><?php echo nl2br(htmlspecialchars($service['content'])); ?></p>
                         </div>
                     </div>
                 </div>
@@ -117,9 +117,9 @@
     <section id="contact">
         <h2 class="mt-4">Contact Us</h2>
         <ul class="list-group">
-            <li class="list-group-item"><strong>Email:</strong> <?php echo htmlspecialchars($contact['email']); ?></li>
-            <li class="list-group-item"><strong>Phone:</strong> <?php echo htmlspecialchars($contact['phone']); ?></li>
-            <li class="list-group-item"><strong>Address:</strong> <?php echo nl2br(htmlspecialchars($contact['address'])); ?></li>
+            <li class="list-group-item"><strong>Email:</strong> <?php echo htmlspecialchars($contact['title']); ?></li>
+            <li class="list-group-item"><strong>Phone:</strong> <?php echo htmlspecialchars($contact['content']); ?></li>
+            <li class="list-group-item"><strong>Address:</strong> <?php echo nl2br(htmlspecialchars($contact['content'])); ?></li>
         </ul>
     </section>
 </div>

@@ -2,7 +2,7 @@
 class Service
 {
     private $conn;
-    private $table = 'services';
+    private $table = 'master_info';
 
     public function __construct($db)
     {
